@@ -21,3 +21,136 @@ Migrating to AddFieldsToMovies (20130301192005)
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130301191943')
   [1m[36mMovie Load (3.2ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT 1[0m
   [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00], ["description", "Tony Stark builds an armored suit to fight the throes of evil"], ["rating", "PG-13"], ["released_on", Fri, 02 May 2008], ["title", "Iron Man"], ["total_gross", #<BigDecimal:7fd24e022ab0,'0.318412101E9',9(36)>], ["updated_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00], ["description", "Clark Kent grows up to be the greatest super-hero"], ["rating", "PG"], ["released_on", Fri, 15 Dec 1978], ["title", "Superman"], ["total_gross", #<BigDecimal:7fd24c23f458,'0.134218018E9',9(36)>], ["updated_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00], ["description", "Peter Parker gets bit by a genetically modified spider"], ["rating", "PG-13"], ["released_on", Fri, 03 May 2002], ["title", "Spider-Man"], ["total_gross", #<BigDecimal:7fd24c262570,'0.403706375E9',9(36)>], ["updated_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00], ["description", "Patience Philips has a more than respectable career as a graphic designer"], ["rating", "PG-13"], ["released_on", Fri, 23 Jul 2004], ["title", "Catwoman"], ["total_gross", #<BigDecimal:7fd24c2cbca0,'0.402E8',9(36)>], ["updated_at", Sun, 08 Dec 2013 21:51:15 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 14:51:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 24ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 598ms (Views: 573.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:05 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-08 14:52:16 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-08 14:52:24 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 14:52:58 -0700
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-08 14:53:06 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 14:54:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 93ms (Views: 74.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
