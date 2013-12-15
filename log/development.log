@@ -154,3 +154,41 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27
 
 
 Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-08 14:54:27 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 107ms (Views: 88.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 17:33:57 -0700
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-14 17:34:01 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms)

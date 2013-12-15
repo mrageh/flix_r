@@ -11,6 +11,7 @@ describe "Viewing an individual movie" do
     expect(page).to have_text("$318,412,101.00")
     expect(page).to have_text(movie.description)
     expect(page).to have_text(movie.released_on)
+    expect(page).to have_text("Edit")
   end
 
   it "shows the total gross if the total gross exceeds $50M" do
