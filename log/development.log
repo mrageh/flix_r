@@ -192,3 +192,103 @@ Processing by MoviesController#show as HTML
   [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
   Rendered movies/show.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-14 17:40:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 98ms (Views: 35.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies/4/edit" for 127.0.0.1 at 2013-12-14 17:40:49 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/edit.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/4" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gW9GzGxNncAmsd5pYt1YNZvgdz+hslpblJXp8Ukq5KE=", "movie"=>{"title"=>"Catwoman", "description"=>"Patience Philips has a more than respectable career as a graphic designer", "rating"=>"PG-13", "total_gross"=>"40200000", "released_on(1i)"=>"2004", "released_on(2i)"=>"7", "released_on(3i)"=>"23"}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:50 -0700
+
+
+Started GET "/movies/4/edit" for 127.0.0.1 at 2013-12-14 17:40:52 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/4" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gW9GzGxNncAmsd5pYt1YNZvgdz+hslpblJXp8Ukq5KE=", "movie"=>{"title"=>"girl", "description"=>"Patience Philips has a more than respectable career as a graphic designer", "rating"=>"PG-13", "total_gross"=>"40200000", "released_on(1i)"=>"2004", "released_on(2i)"=>"7", "released_on(3i)"=>"23"}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mUPDATE "movies" SET "title" = ?, "updated_at" = ? WHERE "movies"."id" = 4[0m  [["title", "girl"], ["updated_at", Sun, 15 Dec 2013 00:40:56 UTC +00:00]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 14ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 17:40:56 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-14 17:40:59 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)

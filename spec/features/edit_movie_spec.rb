@@ -19,6 +19,9 @@ describe "Editing a movie" do
     click_button "Update Movie"
 
     expect(current_path).to eq(movie_path(movie))
+    expect(page).to have_content("Iron Man 2")
+    expect(page).to have_content("15")
+    expect(page).to have_content("Epic sequel to Iron Man")
   end
 end
 
