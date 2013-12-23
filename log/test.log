@@ -4198,3 +4198,106 @@ Processing by MoviesController#show as HTML
   Rendered movies/show.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
   [1m[36m (2.7ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:54:46 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 26.1ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:56:09 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:56:52 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 34ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:57:10 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 39ms (Views: 20.0ms | ActiveRecord: 2.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-22 18:57:10 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:57:48 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 36ms (Views: 18.8ms | ActiveRecord: 1.2ms)
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-22 18:57:48 -0700
+Processing by MoviesController#new as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:59:05 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 18.8ms | ActiveRecord: 1.1ms)
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-22 18:59:05 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2013-12-22 18:59:05 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:59:43 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 18.6ms | ActiveRecord: 1.3ms)
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-22 18:59:43 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2013-12-22 18:59:43 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Iron Man 3", "description"=>"Trilogy finale who is going to win", "rating"=>"PG-15", "total_gross"=>"45000000", "released_on(1i)"=>"2012", "released_on(2i)"=>"12", "released_on(3i)"=>"23"}, "commit"=>"Create Movie"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Dec 2013 01:59:43 UTC +00:00], ["description", "Trilogy finale who is going to win"], ["rating", "PG-15"], ["released_on", Sun, 23 Dec 2012], ["title", "Iron Man 3"], ["total_gross", #<BigDecimal:7fe61dbba818,'0.45E8',9(18)>], ["updated_at", Mon, 23 Dec 2013 01:59:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2013-12-22 18:59:53 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 16.2ms | ActiveRecord: 1.0ms)
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-22 18:59:54 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+Started POST "/movies" for 127.0.0.1 at 2013-12-22 18:59:54 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Iron Man 3", "description"=>"Trilogy finale who is going to win", "rating"=>"PG-15", "total_gross"=>"45000000", "released_on(1i)"=>"2012", "released_on(2i)"=>"12", "released_on(3i)"=>"23"}, "commit"=>"Create Movie"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Dec 2013 01:59:54 UTC +00:00], ["description", "Trilogy finale who is going to win"], ["rating", "PG-15"], ["released_on", Sun, 23 Dec 2012], ["title", "Iron Man 3"], ["total_gross", #<BigDecimal:7fb39d9c28d8,'0.45E8',9(18)>], ["updated_at", Mon, 23 Dec 2013 01:59:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/movies/1
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-22 18:59:54 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m

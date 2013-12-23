@@ -292,3 +292,89 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
   Rendered movies/index.html.erb within layouts/application (4.6ms)
 Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-14 18:18:26 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2013-12-14 18:18:29 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2013-12-14 18:18:30 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/2" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gW9GzGxNncAmsd5pYt1YNZvgdz+hslpblJXp8Ukq5KE=", "movie"=>{"title"=>"Superman", "description"=>"Clark Kent grows up to be the greatest super-hero", "rating"=>"PG", "total_gross"=>"134218018", "released_on(1i)"=>"1978", "released_on(2i)"=>"12", "released_on(3i)"=>"15"}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 18:18:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+Processing by MoviesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
