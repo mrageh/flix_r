@@ -378,3 +378,13 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 
 
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-14 18:26:53 -0700
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:13:05.739339') ORDER BY released_on
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:13:22.521785') ORDER BY released_on[0m
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:14:46.226304') ORDER BY released_on desc
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:15:01.570446') ORDER BY released_on ascend[0m
+SQLite3::SQLException: near "ascend": syntax error: SELECT "movies".* FROM "movies"  WHERE (released_on <= '2013-12-23 22:15:01.570446')  ORDER BY released_on ascend
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:15:13.481909') ORDER BY released_on asc
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:16:47.407267') ORDER BY released_on desc[0m
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:17:34.604129') ORDER BY released_on desc
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-23 22:17:38.490579') ORDER BY released_on desc[0m
