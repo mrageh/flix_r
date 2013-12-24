@@ -34,7 +34,6 @@
     <%= f.text_field :rating %>
   </p>
 
-
   <p>
     <%= f.label :total_gross %><br/>
     <%= f.text_field :total_gross %>
@@ -46,6 +45,7 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit %> |
+    <%= link_to "Cancel", root_path%>
   </p>
   <% end %>
