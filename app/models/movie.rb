@@ -6,4 +6,8 @@ class Movie < ActiveRecord::Base
   def self.released
     where("released_on <= ?", Time.now).order("released_on DESC")
   end
+
+  def image_blank?
+    image_file_name.blank?
+  end
 end

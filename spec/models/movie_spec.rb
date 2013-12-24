@@ -38,4 +38,10 @@ describe "A movie" do
 
     expect(Movie.released).to eq([movie3, movie2, movie1])
   end
+
+  it "knows if it has a image" do
+    movie = Movie.create(movie_attributes(image_file_name: nil))
+
+    expect(Movie.last.image_blank?).to eq(true)
+  end
 end
