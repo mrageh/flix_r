@@ -10,7 +10,7 @@ describe "Deleting a movie" do
 
     click_on "Delete"
 
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(movies_path)
     expect(Movie.count).to eq (0)
   end
 end
