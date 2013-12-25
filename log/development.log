@@ -1340,3 +1340,877 @@ Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-23 21:16:07 -0700
 
 
 Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-23 21:16:07 -0700
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM schema_migrations[0m
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131224022840')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130301191943')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130301192005')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:32:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:32:38.861565')
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:32:38.861565') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (232.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidebar.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 866ms (Views: 694.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:32:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:34:26.121574')
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:34:26.121574') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 119.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:34:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:34:40 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:34:40.645495')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:34:40.645495') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 121ms (Views: 115.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:34:41 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:34:41.927690')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:34:41.927690') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 43.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:34:42 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:35:55.016979')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:35:55.016979') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:35:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:35:57.058485')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:35:57.058485') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:35:57 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:37:53 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:37:53.102316')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:37:53.102316') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (Invalid CSS after "...ground: #F0F0F0": expected ";", was """
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/layout.css.scss:14)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/layout.css.scss:14
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (103.6ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (146.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:37:54 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:37:54.912397')
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:37:54.912397') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (Invalid CSS after "...ground: #F0F0F0": expected ";", was """
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/layout.css.scss:14)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/layout.css.scss:14
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:38:07 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:38:07.657347')
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:38:07.657347') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (Invalid CSS after "...ground: #F0F0F0": expected ";", was "";"
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/layout.css.scss:14)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/layout.css.scss:14
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:38:09 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:38:09.044509')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:38:09.044509') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (Invalid CSS after "...ground: #F0F0F0": expected ";", was "";"
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/layout.css.scss:14)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/layout.css.scss:14
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:38:20 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:38:20.689417')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:38:20.689417') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 210ms (Views: 205.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:38:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:38:44 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:38:44.794719')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:38:44.794719') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:38:45 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:39:36.533941')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:39:36.533941') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 122.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:39:37 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:39:38.116568')
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:39:38.116568') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:39:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:41:42.320822')
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:41:42.320822') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 145ms (Views: 140.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:41:42 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:44:10 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:44:10.200085')
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:44:10.200085') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (Undefined variable: "$secondary-color".
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/movies.css.scss:8)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/movies.css.scss:8
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:44:12 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:44:12.619702')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:44:12.619702') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (Undefined variable: "$secondary-color".
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/movies.css.scss:8)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/movies.css.scss:8
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:44:54 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:44:55.004379')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:44:55.004379') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (Undefined variable: "$secondary-color".
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/movies.css.scss:8)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/movies.css.scss:8
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:44:56 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:44:56.241294')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:44:56.241294') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (Undefined variable: "$secondary-color".
+  (in /Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/assets/stylesheets/movies.css.scss:8)):
+    2: <html>
+    3: <head>
+    4:   <title>Super-Heroic Flix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/movies.css.scss:8
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___171379656977370379_70267368392300'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:45:03 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:45:03.799523')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:45:03.799523') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 159ms (Views: 153.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:45:04 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+Processing by MoviesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "movies" WHERE (released_on <= '2013-12-25 03:45:21.350793')
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-25 03:45:21.350793') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/_colors.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-24 20:45:21 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-24 20:45:30 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidebar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-24 20:45:30 -0700
