@@ -44,4 +44,53 @@ describe "A movie" do
 
     expect(Movie.last.image_blank?).to eq(true)
   end
+
+  it "title cannot be empty" do
+    movie = Movie.create(movie_attributes(title: nil))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:title].any?).to be_true
+  end
+
+  it "duration cannot be empty" do
+    movie = Movie.create(movie_attributes(duration: nil))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:duration].any?).to be_true
+  end
+
+  it "release date has to be there" do
+    movie = Movie.create(movie_attributes(released_on: nil))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:released_on].any?).to be_true
+  end
+
+  it "description must be at least 25 characters long" do
+    movie = Movie.create(movie_attributes(description: "jffsdakjskjfjka"))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:description].any?).to be_true
+  end
+
+  it "total gross must be greater than or equal to 0" do
+    movie = Movie.create(movie_attributes(total_gross: -1434))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:total_gross].any?).to be_true
+  end
+
+  it "image file name can only have certain file extensions" do
+    movie = Movie.create(movie_attributes(image_file_name: "fdjask.pdf"))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:image_file_name].any?).to be_true
+  end
+
+  it "the rating must be a universally recognised one for movies" do
+    movie = Movie.create(movie_attributes(rating: "GH"))
+
+    expect(movie.valid?).to be_false
+    expect(movie.errors[:rating].any?).to be_true
+  end
 end
