@@ -195,3 +195,460 @@ Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-12-24 22:49:11 -0700
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121210234158')[0m
   [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 01:34:30.616880') ORDER BY released_on DESC
+  Rendered movies/index.html.erb within layouts/application (72.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 156ms (Views: 134.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:34:30 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-12-26 18:34:31 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-26 18:34:31 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2013-12-26 18:34:31 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2013-12-26 18:34:31 -0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-26 18:34:35 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (13.7ms)
+  Rendered movies/new.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"asesomd", "description"=>"jfdsalkjgaskljg ljdslkajg klajkgl jklasdgjalgjklakgjklagjalj", "rating"=>"PG-13", "released_on(1i)"=>"2013", "released_on(2i)"=>"12", "released_on(3i)"=>"27", "total_gross"=>"1111114", "duration"=>"132", "image_file_name"=>"", "cast"=>"fsdaf", "director"=>"sfafd"}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", "fsdaf"], ["created_at", Fri, 27 Dec 2013 01:35:03 UTC +00:00], ["description", "jfdsalkjgaskljg ljdslkajg klajkgl jklasdgjalgjklakgjklagjalj"], ["director", "sfafd"], ["duration", "132"], ["image_file_name", ""], ["rating", "PG-13"], ["released_on", Fri, 27 Dec 2013], ["title", "asesomd"], ["total_gross", #<BigDecimal:7fa4c10cde98,'0.1111114E7',9(18)>], ["updated_at", Fri, 27 Dec 2013 01:35:03 UTC +00:00]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/7
+Completed 302 Found in 42ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered movies/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2013-12-26 18:35:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 01:35:16.054286') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-26 18:35:16 -0700
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2013-12-26 18:35:18 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered movies/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2013-12-26 18:35:18 -0700
+
+
+Started DELETE "/movies/7" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 01:35:21.666855') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 18:35:21 -0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-26 18:35:24 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (5.9ms)
+  Rendered movies/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 01:39:08.071881') ORDER BY released_on DESC
+  Rendered movies/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2013-12-26 18:39:08 -0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-26 18:39:10 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (5.5ms)
+  Rendered movies/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-12-26 18:39:46 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"jfskdkajfdk", "description"=>"fajdskdfjlakdfjklajkf jkalsdjfklasjfd ljalfdj lasj lsajfdlsajl jalsf ksadlj fkdfj klsaj", "rating"=>"PG", "released_on(1i)"=>"2013", "released_on(2i)"=>"12", "released_on(3i)"=>"24", "total_gross"=>"-10", "duration"=>"13", "image_file_name"=>"", "cast"=>"dfs", "director"=>"dfsa"}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-26 18:39:46 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 01:39:46.969247') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
