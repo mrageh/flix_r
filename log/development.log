@@ -652,3 +652,522 @@ Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
 
 
 Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 18:39:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-26 22:13:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 05:13:29.963515') ORDER BY released_on DESC
+  Rendered movies/index.html.erb within layouts/application (77.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 130.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2013-12-26 22:13:30 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 05:13:33.770291') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 22:13:33 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-26 22:13:35 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:13:35 -0700
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2013-12-26 22:13:37 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/_form.html.erb (44.6ms)
+  Rendered movies/edit.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"Iron Man", "description"=>"When wealthy industrialist Tony Stark is forced to build an armored suit after a life-threatening incident, he ultimately decides to use its technology to fight against evil.", "rating"=>"PG-13", "released_on(1i)"=>"2008", "released_on(2i)"=>"5", "released_on(3i)"=>"2", "total_gross"=>"-318412101", "duration"=>"126 min", "image_file_name"=>"ironman.jpg", "cast"=>"Robert Downey Jr., Gwyneth Paltrow and Terrence Howard", "director"=>"Jon Favreau"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:13:42 -0700
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (27.9ms)
+  Rendered movies/_form.html.erb (44.6ms)
+  Rendered movies/edit.html.erb within layouts/application (47.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 114.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:14:56 -0700
+
+
+Started PATCH "/movies/1" for 127.0.0.1 at 2013-12-26 22:15:00 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"", "description"=>"When wealthy industrialist Tony Stark is forced to build an armored suit after a life-threatening incident, he ultimately decides to use its technology to fight against evil.", "rating"=>"PG-13", "released_on(1i)"=>"2008", "released_on(2i)"=>"5", "released_on(3i)"=>"2", "total_gross"=>"318412101", "duration"=>"126 min", "image_file_name"=>"ironman.jpg", "cast"=>"Robert Downey Jr., Gwyneth Paltrow and Terrence Howard", "director"=>"Jon Favreau"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-26 22:15:00 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:01 -0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-26 22:15:05 -0700
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered movies/_form.html.erb (9.0ms)
+  Rendered movies/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"", "description"=>"", "rating"=>"", "released_on(1i)"=>"2013", "released_on(2i)"=>"12", "released_on(3i)"=>"27", "total_gross"=>"", "duration"=>"", "image_file_name"=>"", "cast"=>"", "director"=>""}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-27 05:15:07.384054') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-26 22:15:07 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-26 22:15:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 147ms (Views: 75.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:15:43 -0700
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2013-12-26 22:15:45 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (1.6ms)
+  Rendered movies/_form.html.erb (13.5ms)
+  Rendered movies/edit.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"", "description"=>"When wealthy industrialist Tony Stark is forced to build an armored suit after a life-threatening incident, he ultimately decides to use its technology to fight against evil.", "rating"=>"PG-13", "released_on(1i)"=>"2008", "released_on(2i)"=>"5", "released_on(3i)"=>"2", "total_gross"=>"318412101", "duration"=>"126 min", "image_file_name"=>"ironman.jpg", "cast"=>"Robert Downey Jr., Gwyneth Paltrow and Terrence Howard", "director"=>"Jon Favreau"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-26 22:15:49 -0700
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2013-12-26 22:16:46 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered movies/_form.html.erb (9.2ms)
+  Rendered movies/edit.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/movies/1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"", "description"=>"When wealthy industrialist Tony Stark is forced to build an armored suit after a life-threatening incident, he ultimately decides to use its technology to fight against evil.", "rating"=>"PG-13", "released_on(1i)"=>"2008", "released_on(2i)"=>"5", "released_on(3i)"=>"2", "total_gross"=>"318412101", "duration"=>"126 min", "image_file_name"=>"ironman.jpg", "cast"=>"Robert Downey Jr., Gwyneth Paltrow and Terrence Howard", "director"=>"Jon Favreau"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered movies/_form.html.erb (9.7ms)
+  Rendered movies/edit.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-26 22:16:49 -0700
