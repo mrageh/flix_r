@@ -24,6 +24,7 @@ describe "Editing a movie" do
 
 
     expect(current_path).to eq(movie_path(movie))
+    expect(page).to have_text("Movie successfully updated!")
     expect(page).to have_content("Iron Man 2")
     expect(page).to have_content("PG-13")
     expect(page).to have_content("Epic sequel to Iron Man")

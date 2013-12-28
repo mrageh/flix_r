@@ -11,6 +11,7 @@ describe "Deleting a movie" do
     click_on "Delete"
 
     expect(current_path).to eq(movies_path)
+    expect(page).to have_text("Movie successfully deleted!")
     expect(Movie.count).to eq (0)
   end
 end

@@ -22,6 +22,7 @@ describe "Can create movie" do
     click_on "Create Movie"
 
     expect(Movie.all.count).to eq(1)
+    expect(page).to have_text("Movie successfully created!")
     expect(current_path).to eq(movie_path(Movie.last))
 
     expect(page).to have_text("Iron Man 3")
