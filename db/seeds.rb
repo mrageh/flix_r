@@ -103,3 +103,10 @@ Movie.create!([
     total_gross: 387_623_910
   }
 ])
+
+Movie.all.each do |movie|
+  movie.reviews.create(full_name: "Matty", stars: 4, comment: "Completely epic", city: "Northampton", state: "Northamptonshire")
+  movie.reviews.create(full_name: "Anderson", stars: 5, comment: "hspect the movie its good", city: "Las Vegas", state: "California")
+  movie.reviews.create(full_name: "Chris", stars: 4, comment: "hspect this fighter he beat anderson twice", city: "New york", state: "DC")
+  movie.reviews.create(full_name: "Chael", stars: 4, comment: "Cannot believe he lost", city: "Washington", state: "Baltimore")
+end

@@ -1663,3 +1663,138 @@ Migrating to CreateReviews (20131229010140)
   [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121210234158')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldToReviews (20131229055928)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "reviews" ADD "city" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "reviews" ADD "state" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131229055928"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "stars" integer, "comment" text, "movie_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255), "state" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229055928')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121210234158')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229010140')[0m
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (16.2ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "stars" integer, "comment" text, "movie_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255), "state" varchar(255)) 
+  [1m[36m (1.7ms)[0m  [1mCREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229055928')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121210234158')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229010140')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", "Robert Downey Jr., Gwyneth Paltrow and Terrence Howard"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "When wealthy industrialist Tony Stark is forced to build an armored suit after a life-threatening incident, he ultimately decides to use its technology to fight against evil."], ["director", "Jon Favreau"], ["duration", "126 min"], ["image_file_name", "ironman.jpg"], ["rating", "PG-13"], ["released_on", Fri, 02 May 2008], ["title", "Iron Man"], ["total_gross", #<BigDecimal:7fa278b05bb8,'0.318412101E9',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cast", "Christopher Reeve, Margot Kidder and Gene Hackman"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "An alien orphan is sent from his dying planet to Earth, where he grows up to become his adoptive home's first and greatest super-hero."], ["director", "Richard Donner"], ["duration", "143 min"], ["image_file_name", "superman.jpg"], ["rating", "PG"], ["released_on", Fri, 15 Dec 1978], ["title", "Superman"], ["total_gross", #<BigDecimal:7fa278e58a90,'0.134218018E9',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", "Tobey Maguire, Kirsten Dunst and Willem Dafoe"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family."], ["director", "Sam Raimi"], ["duration", "121 min"], ["image_file_name", "spiderman.jpg"], ["rating", "PG-13"], ["released_on", Fri, 03 May 2002], ["title", "Spider-Man"], ["total_gross", #<BigDecimal:7fa278f53cb0,'0.403706375E9',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cast", "Michael Keaton, Jack Nicholson and Kim Basinger"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker."], ["director", "Tim Burton"], ["duration", "126 min"], ["image_file_name", "batman.jpg"], ["rating", "PG-13"], ["released_on", Fri, 23 Jun 1989], ["title", "Batman"], ["total_gross", #<BigDecimal:7fa278fd1548,'0.251188924E9',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", "Halle Berry, Sharon Stone and Benjamin Bratt"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "Patience Philips seems destined to spend her life apologizing for taking up space. Despite her artistic ability&mdash;she has a more than respectable career as a graphic designer."], ["director", "Jean-Christophe 'Pitof' Comar"], ["duration", "101 min"], ["image_file_name", "catwoman.jpg"], ["rating", "PG-13"], ["released_on", Fri, 23 Jul 2004], ["title", "Catwoman"], ["total_gross", #<BigDecimal:7fa27b040e78,'0.402E8',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cast", "Bruce Wayne, Gojira"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["description", "An epic battle between The Caped Crusader and the fire-breathing dinosaur Gojira. Hang on to your popcorn, kids!"], ["director", "Ishiro Honda"], ["duration", "211 min"], ["image_file_name", "batman-vs-godzilla.jpg"], ["rating", "PG-13"], ["released_on", Wed, 08 Jan 2014], ["title", "Batman vs. Godzilla"], ["total_gross", #<BigDecimal:7fa27b0baa48,'0.38762391E9',9(36)>], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Matty"], ["movie_id", 1], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 1], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chris"], ["movie_id", 1], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chael"], ["movie_id", 1], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Matty"], ["movie_id", 2], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 2], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chris"], ["movie_id", 2], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chael"], ["movie_id", 2], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Matty"], ["movie_id", 3], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 3], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chris"], ["movie_id", 3], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chael"], ["movie_id", 3], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Matty"], ["movie_id", 4], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 4], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chris"], ["movie_id", 4], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00], ["full_name", "Chael"], ["movie_id", 4], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:48 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Matty"], ["movie_id", 5], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 5], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Chris"], ["movie_id", 5], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Chael"], ["movie_id", 5], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Northampton"], ["comment", "Completely epic"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Matty"], ["movie_id", 6], ["stars", 4], ["state", "Northamptonshire"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Las Vegas"], ["comment", "hspect the movie its good"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Anderson"], ["movie_id", 6], ["stars", 5], ["state", "California"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New york"], ["comment", "hspect this fighter he beat anderson twice"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Chris"], ["movie_id", 6], ["stars", 4], ["state", "DC"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reviews" ("city", "comment", "created_at", "full_name", "movie_id", "stars", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Washington"], ["comment", "Cannot believe he lost"], ["created_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00], ["full_name", "Chael"], ["movie_id", 6], ["stars", 4], ["state", "Baltimore"], ["updated_at", Sun, 29 Dec 2013 06:13:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "stars" integer, "comment" text, "movie_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255), "state" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229055928')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121210234158')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229010140')[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT 1[0m
+  [1m[35mReview Load (1.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
