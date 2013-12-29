@@ -1421,3 +1421,245 @@ Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-28 14:44:15 -0700
 
 
 Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-28 14:44:15 -0700
+
+
+Started GET "/events" for 127.0.0.1 at 2013-12-28 15:11:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/events"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Home/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Home/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Home/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-28 15:11:45 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-28 22:11:45.950085') ORDER BY released_on DESC
+  Rendered movies/index.html.erb within layouts/application (67.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 169ms (Views: 137.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-28 15:11:46 -0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-12-28 15:11:48 -0700
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (1.7ms)
+  Rendered movies/_form.html.erb (12.7ms)
+  Rendered movies/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "movie"=>{"title"=>"dfsagh", "description"=>"dhsajfhas hjksajhdgak haksghkashajkgs ahkgahjk ahk gakgh kahgjk", "rating"=>"PG-13", "released_on(1i)"=>"2013", "released_on(2i)"=>"12", "released_on(3i)"=>"26", "total_gross"=>"153123153", "duration"=>"126 min", "image_file_name"=>"", "cast"=>"", "director"=>""}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", ""], ["created_at", Sat, 28 Dec 2013 22:12:06 UTC +00:00], ["description", "dhsajfhas hjksajhdgak haksghkashajkgs ahkgahjk ahk gakgh kahgjk"], ["director", ""], ["duration", "126 min"], ["image_file_name", ""], ["rating", "PG-13"], ["released_on", Thu, 26 Dec 2013], ["title", "dfsagh"], ["total_gross", #<BigDecimal:7fed7d2bb2c8,'0.153123153E9',9(18)>], ["updated_at", Sat, 28 Dec 2013 22:12:06 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/8
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/8" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered movies/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:06 -0700
+
+
+Started DELETE "/movies/8" for 127.0.0.1 at 2013-12-28 15:12:12 -0700
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9FWQDx2gwM26cUsApN/FTEPiS6IreUkebrrjRbHXtM=", "id"=>"8"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-12-28 15:12:12 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2013-12-28 22:12:12.949078') ORDER BY released_on DESC[0m
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:12 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2013-12-28 15:12:13 -0700
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" ORDER BY "reviews"."id" ASC LIMIT 1[0m
+SQLite3::SQLException: no such table: reviews: SELECT  "reviews".* FROM "reviews"   ORDER BY "reviews"."id" ASC LIMIT 1
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" ORDER BY "reviews"."id" ASC LIMIT 1
+SQLite3::SQLException: no such table: reviews: SELECT  "reviews".* FROM "reviews"   ORDER BY "reviews"."id" ASC LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121210234158')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM schema_migrations[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20131229010140)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "stars" integer, "comment" text, "movie_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131229010140"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "total_gross" decimal, "created_at" datetime, "updated_at" datetime, "description" text, "released_on" date, "cast" varchar(255), "director" varchar(255), "duration" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "stars" integer, "comment" text, "movie_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mCREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229010140')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121121163535')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121121180707')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121210234158')

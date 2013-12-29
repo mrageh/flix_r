@@ -15,6 +15,8 @@ class Movie < ActiveRecord::Base
   message: "must reference a GIF, JPG or PNG image"
   }
 
+  has_many :reviews, dependent: :destroy
+
   def flop?
     total_gross.blank? || total_gross < 50000000
   end

@@ -1,6 +1,24 @@
 require "spec_helper"
 
 describe "A movie" do
+
+  it "has many reviews" do
+    movie = Movie.create!(movie_attributes())
+    review1 = Review.create!(review_attributes(movie_id: movie.id))
+    review2 = movie.reviews.create!(review_attributes())
+
+    expect(movie.reviews).to include(review1)
+    expect(movie.reviews).to include(review2)
+  end
+
+  it "associated reviews are deleted" do
+    movie = Movie.create!(movie_attributes())
+    review1 = Review.create!(review_attributes(movie_id: movie.id))
+    review2 = movie.reviews.create!(review_attributes())
+
+    expect{movie.destroy}.to change(Review, :count).by(-2)
+  end
+
   it "is a flop if the total gross is less than $50M" do
     movie = Movie.new(total_gross: 12101)
 
