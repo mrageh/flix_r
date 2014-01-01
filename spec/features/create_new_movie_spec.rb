@@ -18,7 +18,7 @@ describe "Can create movie" do
 
     select (Time.now.year - 1).to_s, from: "movie[released_on(1i)]"
     select ("June").to_s, from: "movie[released_on(2i)]"
-    select (Time.now.day - 4).to_s, from: "movie[released_on(3i)]"
+    select (Time.now.day).to_s, from: "movie[released_on(3i)]"
     click_on "Create Movie"
 
     expect(Movie.all.count).to eq(1)
