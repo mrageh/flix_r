@@ -10,7 +10,9 @@ describe "Listing Reviews" do
     movie2 = Movie.create(movie_attributes(title: "Superman"))
     review3 = movie2.reviews.create(review_attributes(full_name: "Peter Travers"))
 
-    visit movie_reviews_url(movie1)
+    visit movie_url(movie1)
+
+    click_on "Reviews!"
 
     expect(page).to have_text(review1.full_name)
     expect(page).to have_text(review2.full_name)
