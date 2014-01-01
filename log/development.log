@@ -1798,3 +1798,81 @@ Migrating to AddFieldToReviews (20131229055928)
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131229010140')[0m
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT 1[0m
   [1m[35mReview Load (1.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-01 11:31:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-01 18:31:05.637428') ORDER BY released_on DESC
+  Rendered movies/index.html.erb within layouts/application (42.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 357ms (Views: 334.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-01-01 11:31:06 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-01-01 11:31:06 -0700

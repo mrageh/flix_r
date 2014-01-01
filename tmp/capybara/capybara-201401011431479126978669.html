@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flix</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+
+<header id="page-header">
+  <div id="masthead">
+    <h1><a href="/">Flix</a></h1>
+  </div>
+</header>
+
+
+<div id="wrapper">
+
+  
+
+  <div id="container">
+    <section id="sidebar">
+      <aside id="sidebar">
+  <nav>
+    <ul>
+      <li class="all-movies">
+        <a class="button" href="/movies">All Movies</a>
+      </li>
+      <li class="create-movie">
+        <a class="button" href="/movies/new">Add New Movie</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+    </section>
+    <section id="content">
+      <header id="content-header">
+  <h1>New Review for <a href="/movies/1">Iron Man</a></h2>
+</header>
+
+<form accept-charset="UTF-8" action="/movies/1/reviews" class="new_review" id="new_review" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <section id="errors">
+  <header>
+    <h2>
+      Oops! The review could not be saved.
+    </h2>
+    <h3>
+      Please correct the following 0 errors:
+    </h3>
+  </header>
+  <ul>
+      <li>Stars must be between 1 and 5</li>
+  </ul>
+</section>
+
+  <fieldset>
+    <ol>
+      <li class="required">
+        <label for="review_full_name">Full name</label>
+        <input autofocus="autofocus" id="review_full_name" name="review[full_name]" size="40" type="text" value="Roger Ebert" />
+      </li>
+      <li class="required stars">
+        <div class="field_with_errors"><label for="review_stars">Stars</label></div>
+        <div class="field_with_errors"><select id="review_stars" name="review[stars]"><option value="">Pick one</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option></select></div>
+      </li>
+      <li class="required">
+        <label for="review_comment">Comment</label>
+        <textarea cols="80" id="review_comment" name="review[comment]" placeholder="What did you think?">
+I laughed, I cried, I spilled my popcorn!</textarea>
+      </li>
+    </ol>
+    <p>
+      <input name="commit" type="submit" value="Post Review" />
+      <a class="button" href="/movies/1">Cancel</a>
+    </p>
+  </fieldset>
+</form>
+    </section>
+  </div>
+
+</div>
+
+<footer id="page-footer">
+  <p>
+    Copyright &copy; 2013
+    <a href="http://pragmaticstudio.com">The Pragmatic Studio</a>
+  </p>
+  <p>
+    For educational purposes only.
+  </p>
+</footer>
+
+</body>
+</html>
