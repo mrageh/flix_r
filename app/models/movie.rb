@@ -28,4 +28,12 @@ class Movie < ActiveRecord::Base
   def image_blank?
     image_file_name.blank?
   end
+
+  def average_stars
+    reviews.average(:stars)
+  end
+
+  def any_reviews?
+    !average_stars.blank?
+  end
 end

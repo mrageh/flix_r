@@ -111,4 +111,19 @@ describe "A movie" do
     expect(movie.valid?).to be_false
     expect(movie.errors[:rating].any?).to be_true
   end
+
+  it "shows the average number of review stars" do
+    movie = Movie.create(movie_attributes)
+    movie.reviews.create(review_attributes(stars: 5))
+    movie.reviews.create(review_attributes(stars: 2))
+    movie.reviews.create(review_attributes(stars: 2))
+
+    expect(movie.average_stars).to eq(3)
+  end
+
+  it "returns if it has no reviews" do
+    movie = Movie.create(movie_attributes)
+    expect(movie.any_reviews?).to be_false
+  end
+
 end
