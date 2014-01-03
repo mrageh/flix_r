@@ -2745,3 +2745,500 @@ Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-02 17:16:03 -0700
 
 
 Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-02 17:16:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:40:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:40:59.252043') ORDER BY released_on DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/index.html.erb within layouts/application (72.7ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (String can't be coerced into BigDecimal):
+    25:           </tr>
+    26:           <tr>
+    27:             <th>Average Stars</th>
+    28:             <td><%= format_average_star(movie) %></td>
+    29:           </tr>
+    30:         </table>
+    31:         <footer>
+  app/helpers/reviews_helper.rb:4:in `*'
+  app/helpers/reviews_helper.rb:4:in `format_average_star'
+  app/views/movies/index.html.erb:28:in `block in _app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+  app/views/movies/index.html.erb:2:in `_app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:41:27 -0700
+
+SyntaxError (/Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/helpers/reviews_helper.rb:4: syntax error, unexpected *
+...alize(number_with_precision(* * movie.average_stars, precisi...
+...                               ^
+/Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/helpers/reviews_helper.rb:4: syntax error, unexpected tLABEL
+...movie.average_stars, precision: 1) , 'star')
+...                               ^
+/Users/Home/Programming/projects/ruby/rails/tutorials/prag_studio/flix/app/helpers/reviews_helper.rb:4: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:41:47.639300') ORDER BY released_on DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 121ms (Views: 114.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-01-02 21:41:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:42:55 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:42:55.622610') ORDER BY released_on DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/index.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (String can't be coerced into BigDecimal):
+    25:           </tr>
+    26:           <tr>
+    27:             <th>Average Stars</th>
+    28:             <td><%= format_average_star(movie) %></td>
+    29:           </tr>
+    30:         </table>
+    31:         <footer>
+  app/helpers/reviews_helper.rb:4:in `*'
+  app/helpers/reviews_helper.rb:4:in `format_average_star'
+  app/views/movies/index.html.erb:28:in `block in _app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+  app/views/movies/index.html.erb:2:in `_app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:43:05.806613') ORDER BY released_on DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (41.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-02 21:43:05 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2014-01-02 21:43:11 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:43:11 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 14.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2014-01-02 21:44:26 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 21:44:27 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:44:30.870416') ORDER BY released_on DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-02 21:44:30 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:45:00 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:45:00.804089') ORDER BY released_on DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/index.html.erb within layouts/application (74.2ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (String can't be coerced into BigDecimal):
+    25:           </tr>
+    26:           <tr>
+    27:             <th>Average Stars</th>
+    28:             <td><%= format_average_star(movie) %></td>
+    29:           </tr>
+    30:         </table>
+    31:         <footer>
+  app/helpers/reviews_helper.rb:4:in `*'
+  app/helpers/reviews_helper.rb:4:in `format_average_star'
+  app/views/movies/index.html.erb:28:in `block in _app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+  app/views/movies/index.html.erb:2:in `_app_views_movies_index_html_erb___2225468767531953664_70226925953240'
+
+
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Home/.rvm/gems/ruby-2.0.0-p247@learn-rails/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2014-01-03 04:46:20.648752') ORDER BY released_on DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") AS avg_id FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (47.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 57.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2014-01-02 21:46:20 -0700
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2014-01-02 21:46:20 -0700

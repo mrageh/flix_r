@@ -18,7 +18,11 @@ class Movie < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
 
   def flop?
-    total_gross.blank? || total_gross < 50000000
+    (total_gross.blank? || total_gross < 50000000) && !cult_classic?
+  end
+
+  def cult_classic?
+    reviews.count >= 50 && average_stars >= 4
   end
 
   def self.released

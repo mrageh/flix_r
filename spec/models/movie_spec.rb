@@ -126,4 +126,11 @@ describe "A movie" do
     expect(movie.any_reviews?).to be_false
   end
 
+  it "shows cult classic movies" do
+    movie = Movie.create(movie_attributes)
+    50.times { movie.reviews.create(review_attributes(stars: 4)) }
+
+    expect(movie.cult_classic?).to be_true
+  end
+
 end
