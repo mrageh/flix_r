@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddFieldToReviews	db/migrate/20131229055928_add_field_to_reviews.rb	/^class AddFieldToReviews < ActiveRecord::Migration$/;"	c
+AddFieldsToMovies	db/migrate/20121121180707_add_fields_to_movies.rb	/^class AddFieldsToMovies < ActiveRecord::Migration$/;"	c
+AddMoreFieldsToMovies	db/migrate/20121210234158_add_more_fields_to_movies.rb	/^class AddMoreFieldsToMovies < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Flix
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateMovies	db/migrate/20121121163535_create_movies.rb	/^class CreateMovies < ActiveRecord::Migration$/;"	c
+CreateReviews	db/migrate/20131229010140_create_reviews.rb	/^class CreateReviews < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20140327095639_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Flix	config/application.rb	/^module Flix$/;"	m
+Movie	app/models/movie.rb	/^class Movie < ActiveRecord::Base$/;"	c
+MoviesController	app/controllers/movies_controller.rb	/^class MoviesController < ApplicationController$/;"	c
+MoviesHelper	app/helpers/movies_helper.rb	/^module MoviesHelper$/;"	m
+Review	app/models/review.rb	/^class Review < ActiveRecord::Base$/;"	c
+ReviewsController	app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	c
+ReviewsHelper	app/helpers/reviews_helper.rb	/^module ReviewsHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+any_reviews?	app/models/movie.rb	/^  def any_reviews?$/;"	f	class:Movie
+average_stars	app/models/movie.rb	/^  def average_stars$/;"	f	class:Movie
+change	db/migrate/20121121163535_create_movies.rb	/^  def change$/;"	f	class:CreateMovies
+change	db/migrate/20121121180707_add_fields_to_movies.rb	/^  def change$/;"	f	class:AddFieldsToMovies
+change	db/migrate/20121210234158_add_more_fields_to_movies.rb	/^  def change$/;"	f	class:AddMoreFieldsToMovies
+change	db/migrate/20131229010140_create_reviews.rb	/^  def change$/;"	f	class:CreateReviews
+change	db/migrate/20131229055928_add_field_to_reviews.rb	/^  def change$/;"	f	class:AddFieldToReviews
+change	db/migrate/20140327095639_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+create	app/controllers/movies_controller.rb	/^  def create$/;"	f	class:MoviesController
+create	app/controllers/reviews_controller.rb	/^  def create$/;"	f	class:ReviewsController
+cult_classic?	app/models/movie.rb	/^  def cult_classic?$/;"	f	class:Movie
+destroy	app/controllers/movies_controller.rb	/^  def destroy$/;"	f	class:MoviesController
+edit	app/controllers/movies_controller.rb	/^  def edit$/;"	f	class:MoviesController
+flop?	app/models/movie.rb	/^  def flop?$/;"	f	class:Movie
+format_average_star	app/helpers/reviews_helper.rb	/^  def format_average_star(movie)$/;"	f	class:ReviewsHelper
+format_total_gross	app/helpers/movies_helper.rb	/^  def format_total_gross(movie)$/;"	f	class:MoviesHelper
+image_blank?	app/models/movie.rb	/^  def image_blank?$/;"	f	class:Movie
+image_for	app/helpers/movies_helper.rb	/^  def image_for(movie)$/;"	f	class:MoviesHelper
+index	app/controllers/movies_controller.rb	/^  def index$/;"	f	class:MoviesController
+index	app/controllers/reviews_controller.rb	/^  def index$/;"	f	class:ReviewsController
+movie_attributes	spec/support/attributes.rb	/^def movie_attributes(overrides = {})$/;"	f
+movie_params	app/controllers/movies_controller.rb	/^  def movie_params$/;"	f	class:MoviesController
+new	app/controllers/movies_controller.rb	/^  def new$/;"	f	class:MoviesController
+new	app/controllers/reviews_controller.rb	/^  def new$/;"	f	class:ReviewsController
+released	app/models/movie.rb	/^  def self.released$/;"	F	class:Movie
+review_attributes	spec/support/attributes.rb	/^def review_attributes(overrides = {})$/;"	f
+review_params	app/controllers/reviews_controller.rb	/^  def review_params$/;"	f	class:ReviewsController
+show	app/controllers/movies_controller.rb	/^  def show$/;"	f	class:MoviesController
+update	app/controllers/movies_controller.rb	/^  def update$/;"	f	class:MoviesController

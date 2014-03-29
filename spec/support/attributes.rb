@@ -19,3 +19,12 @@ def review_attributes(overrides = {})
     movie_id: 1
   }.merge(overrides)
 end
+
+def user_attributes(overrides = {})
+  {
+    name: 'Adam',
+    email: 'adam@example.com',
+    password: 'secret',
+    passowrd_confirmation: 'secret'
+  }.merge(overrides)
+end
