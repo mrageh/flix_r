@@ -5,7 +5,7 @@ describe Session do
     it 'can be created without options' do
       session = Session.new
 
-      expect(session).to be_valid
+      expect(session).not_to raise_exception
     end
 
     it 'can be created with options' do
@@ -20,7 +20,6 @@ describe Session do
     context 'with a valid email address and password' do
       it 'returns a user' do
         user = User.create!(user_attributes(
-          name: "test", 
           email: "test@example.com", 
           password: 'password', 
           password_confirmation: 'password'
@@ -34,7 +33,6 @@ describe Session do
     context 'with a valid email and a bad password' do
       it 'returns false' do
         user = User.create!(user_attributes(
-          name: "test", 
           email: "test@example.com", 
           password: 'password', 
           password_confirmation: 'password'
@@ -42,22 +40,14 @@ describe Session do
         session = Session.new(email: 'test@example.com', password: 'badpassword')
 
         expect(session.user).to be_false
-        expect(session.user).not_to eq user
       end
     end
 
     context 'with a bad email address' do
       it 'returns nil' do
-        user = User.create!(user_attributes(
-          name: "test", 
-          email: "test@example.com", 
-          password: 'password', 
-          password_confirmation: 'password'
-        ))
         session = Session.new(email: 'bademail', password: 'password')
 
         expect(session.user).to be_nil 
-        expect(session.user).not_to eq user
       end
     end
   end
