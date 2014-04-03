@@ -1,35 +1,43 @@
 require 'spec_helper'
 
-describe "Viewing the list of movies" do
+feature 'Viewing the list of movies' do
 
-  it "shows the movies" do
-    movie1 = Movie.create(title: "Iron Man",
-                          rating: "PG-13",
-                          total_gross: 318412101.00,
-                          description: "Tony Stark builds an armored suit to fight the throes of evil",
-                          released_on: "2008-05-02",
-                         duration: "132 minutes")
+  scenario 'shows the movies' do
+    movie1 = Movie.create(
+      title: 'Iron Man',
+      rating: 'PG-13',
+      total_gross: 318412101.00,
+      description: 'Tony Stark builds an armored suit to fight the throes',
+      released_on: '2008-05-02',
+      duration: '132 minutes'
+    )
 
-    movie2 = Movie.create(title: "Superman",
-                          rating: "PG",
-                          total_gross: 134218018.00,
-                          description: "Clark Kent grows up to be the greatest super-hero",
-                          released_on: "1978-12-15",
-                          duration: "PG-13")
+    movie2 = Movie.create(
+      title: 'Superman',
+      rating: 'PG',
+      total_gross: 134218018.00,
+      description: 'Clark Kent grows up to be the greatest super-hero',
+      released_on: '1978-12-15',
+      duration: 'PG-13'
+    )
 
-    movie3 = Movie.create(title: "Spider-Man",
-                          rating: "PG-13",
-                          total_gross: 403706375.00,
-                          description: "Peter Parker gets bit by a genetically modified spider",
-                          released_on: "2002-05-03",
-                         duration: "PG-13")
+    movie3 = Movie.create(
+      title: 'Spider-Man',
+      rating: 'PG-13',
+      total_gross: 403706375.00,
+      description: 'Peter Parker gets bit by a genetically modified',
+      released_on: '2002-05-03',
+      duration: 'PG-13'
+    )
 
-    movie4 = Movie.create(title: "Spider-Man 4",
-                          rating: "PG-13",
-                          total_gross: 403706375.00,
-                          description: "Peter Parker gets bit by a genetically modified spider",
-                          released_on: "2025-05-03",
-                         duration: "150 minutes")
+    movie4 = Movie.create(
+      title: 'Spider-Man 4',
+      rating: 'PG-13',
+      total_gross: 403706375.00,
+      description: 'Peter Parker gets bit by a genetically modified spider',
+      released_on: '2025-05-03',
+      duration: '150 minutes'
+    )
 
     visit movies_url
 
@@ -39,10 +47,10 @@ describe "Viewing the list of movies" do
 
     expect(page).to have_text(movie1.rating)
     expect(page).to have_text(movie1.description[0..9])
-    expect(page).to have_text("$318,412,101.00")
+    expect(page).to have_text('$318,412,101.00')
   end
 
-  it "does not show a movie that has not yet been released" do
+  scenario 'does not show a movie that has not yet been released' do
     movie = Movie.create(movie_attributes(released_on: 1.month.from_now))
 
     visit movies_path

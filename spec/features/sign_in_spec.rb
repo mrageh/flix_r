@@ -4,14 +4,7 @@ feature 'Signing in' do
   scenario 'signs in the user if the email/password combination is valid' do
     user = User.create!(user_attributes)
 
-    visit root_url
-
-    click_link 'Sign In'
-
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-
-    click_button 'Sign In'
+    sign_in(user.email, user.password)
 
     expect(current_path).to eq(user_path(user))
     expect(page).to have_text("Welcome back, #{user.name}!")
@@ -23,14 +16,7 @@ feature 'Signing in' do
   scenario 'does not sign in the user if the email/password combination is invalid' do
     user = User.create!(user_attributes)
 
-    visit root_url
-
-    click_link 'Sign In'
-
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: 'no match'
-
-    click_button 'Sign In'
+    sign_in(user.email, 'invalid')
 
     expect(page).to have_text('Invalid')
     expect(page).not_to have_link(user.name)
