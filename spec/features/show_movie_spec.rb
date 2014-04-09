@@ -10,7 +10,6 @@ feature 'Viewing an individual movie' do
     expect(page).to have_text('$318,412,101.00')
     expect(page).to have_text(movie.released_on)
     expect(page).to have_selector("img[src$='#{movie.image_file_name}']")
-    expect(page).to have_text('Edit')
   end
 
   scenario 'shows the total gross if the total gross exceeds $50M' do
