@@ -1,7 +1,6 @@
 class Review < ActiveRecord::Base
   belongs_to :movie
-
-  validates :full_name, presence: true
+  belongs_to :user
 
   STARS = [1, 2, 3, 4, 5]
 
