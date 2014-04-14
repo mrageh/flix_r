@@ -133,4 +133,34 @@ describe "A movie" do
     expect(movie.cult_classic?).to be_true
   end
 
+  context '#favourites' do
+    it 'has many' do
+      movie = Movie.create!(movie_attributes)
+      favourite1 = Favourite.create!(favourite_attributes(movie_id: movie.id))
+      favourite2 = Favourite.create!(favourite_attributes(movie_id: movie.id))
+
+      expect(movie.favourites).to include favourite1
+      expect(movie.favourites).to include favourite2
+    end
+  end
+
+  context '#fans' do
+    it 'has many' do
+      movie = Movie.create!(movie_attributes)
+      user1 = User.create!(user_attributes(
+        name: 'Larry',
+        email: 'larry@example.com',
+      ))
+      user2 = User.create!(user_attributes(
+        name: 'Moe',
+        email: 'moe@example.com'
+      ))
+      favourite1 = Favourite.create!(favourite_attributes(movie_id: movie.id, user_id: user1.id))
+      favourite2 = Favourite.create!(favourite_attributes(movie_id: movie.id, user_id: user2.id))
+
+      expect(movie.fans).to include user1
+      expect(movie.fans).to include user2
+    end
+  end
+
 end

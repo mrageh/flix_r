@@ -8,6 +8,10 @@
       <p><%= r.movie.title %> <%= "(#{time_ago_in_words(r.created_at)})" %></p>
     <% end %>
 
+    <h2>Favourite Movies</h2>
+    <% @favourite_movies.each do |movie| %>
+      <%= link_to movie.title %>
+    <% end %>
   </header>
   <footer>
     <nav>

@@ -27,4 +27,24 @@ feature 'Viewing an individual movie' do
 
     expect(page).to have_text('Flop!')
   end
+
+  scenario 'shows all the fans' do
+    movie = Movie.create(movie_attributes())
+    user1 = User.create!(user_attributes(
+      name: 'Larry',
+      email: 'larry@example.com',
+    ))
+    user2 = User.create!(user_attributes(
+      name: 'Moe',
+      email: 'moe@example.com'
+    ))
+    Favourite.create!(favourite_attributes(movie_id: movie.id, user_id: user1.id))
+    Favourite.create!(favourite_attributes(movie_id: movie.id, user_id: user2.id))
+
+    visit movie_path(movie)
+
+    expect(page).to have_text('2 fans')
+    expect(page).to have_link('Larry')
+    expect(page).to have_link('Moe')
+  end
 end
