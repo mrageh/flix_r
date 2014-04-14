@@ -13,7 +13,7 @@ end
 
 def review_attributes(overrides = {})
   {
-    full_name: "Roger Ebert",
+    user_id: 1,
     stars: 3,
     comment: "I laughed, I cried, I spilled my popcorn!",
     movie_id: 1

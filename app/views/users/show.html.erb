@@ -2,6 +2,12 @@
   <header>
     <h1><%= @user.name %></h1>
     <h2><%= mail_to(@user.email) %></h2>
+
+    <h2>My Reviews</h2>
+    <% @user.reviews.each do |r| %>
+      <p><%= r.movie.title %> <%= "(#{time_ago_in_words(r.created_at)})" %></p>
+    <% end %>
+
   </header>
   <footer>
     <nav>

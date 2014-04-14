@@ -15,20 +15,6 @@ describe Review do
     expect(review.movie).to eq(movie)
   end
 
-  it "accepts a review with a full name" do
-    review = Review.create!(review_attributes())
-
-    expect(review.valid?).to be_true
-    expect(review.errors[:full_name].any?).to be_false
-  end
-
-  it "rejects a review without a full name" do
-    review = Review.create(review_attributes(full_name: nil))
-
-    expect(review.valid?).to be_false
-    expect(review.errors[:full_name].any?).to be_true
-  end
-
   it "accepts a comment with more then four characters" do
     review = Review.create(review_attributes())
 
