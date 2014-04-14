@@ -29,3 +29,10 @@ def user_attributes(overrides = {})
     admin: false,
   }.merge(overrides)
 end
+
+def favourite_attributes(overrides = {})
+  {
+    user_id: 1,
+    movie_id: 1,
+  }.merge(overrides)
+end

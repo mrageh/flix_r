@@ -94,4 +94,28 @@ describe User do
       expect(user.reviews).to include review2
     end
   end
+
+  context '#favourites' do
+    it 'has many' do
+      user = User.create!(user_attributes)
+      favourite1 = Favourite.create!(favourite_attributes(user_id: user.id))
+      favourite2 = Favourite.create!(favourite_attributes(user_id: user.id))
+
+      expect(user.favourites).to include favourite1
+      expect(user.favourites).to include favourite2
+    end
+  end
+
+  context '#favourite_movies' do
+    it 'returns all of the favourite movies' do
+      user = User.create!(user_attributes)
+      movie1 = Movie.create!(movie_attributes(title: 'one piece'))
+      movie2 = Movie.create!(movie_attributes(title: 'luffy'))
+      favourite1 = Favourite.create!(favourite_attributes(user_id: user.id, movie_id: movie1.id))
+      favourite2 = Favourite.create!(favourite_attributes(user_id: user.id, movie_id: movie2.id))
+
+      expect(user.favourite_movies).to include movie1
+      expect(user.favourite_movies).to include movie2
+    end
+  end
 end

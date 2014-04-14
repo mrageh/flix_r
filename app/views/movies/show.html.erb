@@ -9,6 +9,26 @@
     <%= @movie.description %>
   </p>
 
+  <p>
+    <%= pluralize(@fans.size, 'fan') %>
+  </p>
+
+  <% if current_user %>
+    <% if @current_favourite %>
+      <%= button_to 'Unfave', movie_favourite_path(@movie, @current_favourite),
+        method: :delete  %>
+    <% else %>
+      <%= button_to 'Fave', movie_favourites_path(@movie) %>
+    <% end %>
+  <% end %>
+
+  <% if @fans.any? %>
+    <h3>Fans</h3>
+    <% @fans.each do |fan| %>
+      <%= link_to fan.name %>
+    <% end %>
+  <% end %>
+
   <h3 class="no-rule">
     <%= @movie.rating %> &bull; <%= @movie.duration %>
   </h3>

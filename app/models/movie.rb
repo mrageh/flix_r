@@ -16,6 +16,8 @@ class Movie < ActiveRecord::Base
   }
 
   has_many :reviews, dependent: :destroy
+  has_many :favourites, dependent: :destroy
+  has_many :fans, through: :favourites, source: :user
 
   def flop?
     (total_gross.blank? || total_gross < 50000000) && !cult_classic?

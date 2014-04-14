@@ -11,5 +11,6 @@ Flix::Application.routes.draw do
   resources :users
   resources :movies do
     resources :reviews
+    resources :favourites
   end
 end
