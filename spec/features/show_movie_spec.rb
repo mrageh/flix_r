@@ -47,4 +47,51 @@ feature 'Viewing an individual movie' do
     expect(page).to have_link('Larry')
     expect(page).to have_link('Moe')
   end
+
+  scenario 'creates a favourite for the signed-in user and shows the Unfave button' do
+    movie = Movie.create!(movie_attributes)
+    user = User.create!(user_attributes(
+      name: 'Larry',
+      email: 'larry@example.com',
+    ))
+
+    sign_in(user.email, 'secret')
+    visit movie_path(movie)
+
+    expect(page).to have_text('0 fans')
+
+    expect {
+      click_button 'Fave'
+    }.to change(user.favourite_movies, :count).by(1)
+
+    expect(current_path).to eq(movie_path(movie))
+
+    expect(page).to have_text('Thanks for faving!')
+    expect(page).to have_text('1 fan')
+    expect(page).to have_button('Unfave')
+  end
+
+  scenario 'deletes the favourite and shows the Fave button' do
+    movie = Movie.create!(movie_attributes)
+    user = User.create!(user_attributes(
+      name: 'Larry',
+      email: 'larry@example.com',
+    ))
+
+    sign_in(user.email, 'secret')
+    visit movie_url(movie)
+    click_button 'Fave'
+
+    expect(page).to have_text('1 fan')
+
+    expect {
+      click_button 'Unfave'
+    }.to change(user.favourites, :count).by(-1)
+
+    expect(current_path).to eq(movie_path(movie))
+
+    expect(page).to have_text('Sorry you unfaved it!')
+    expect(page).to have_text('0 fans')
+    expect(page).to have_button('Fave')
+  end
 end
